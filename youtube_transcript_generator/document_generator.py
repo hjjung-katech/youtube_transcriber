@@ -206,19 +206,19 @@ def create_script_document(
             f.write("\n\n==== 번역된 전체 스크립트 (한국어) ====\n\n")
             f.write(translated_script)
         
-        f.write("\n\n==== 문단별 정리 스크립트 ====\n\n")
-        if paragraphs:
-            for i, paragraph in enumerate(paragraphs):
-                if paragraph.strip():
-                    f.write(f"{paragraph}\n")
+        # f.write("\n\n==== 문단별 정리 스크립트 ====\n\n")
+        # if paragraphs:
+        #     for i, paragraph in enumerate(paragraphs):
+        #         if paragraph.strip():
+        #             f.write(f"{paragraph}\n")
                     
-                    # 번역된 문단이 있으면 추가
-                    if translated_paragraphs and i < len(translated_paragraphs):
-                        f.write(f"\n[번역] {translated_paragraphs[i]}\n")
+        #             # 번역된 문단이 있으면 추가
+        #             if translated_paragraphs and i < len(translated_paragraphs):
+        #                 f.write(f"\n[번역] {translated_paragraphs[i]}\n")
                     
-                    f.write("\n---\n\n")
-        else:
-            f.write("자막이 없거나 문단 분리가 불가능합니다.\n")
+        #             f.write("\n---\n\n")
+        # else:
+        #     f.write("자막이 없거나 문단 분리가 불가능합니다.\n")
     
     return output_file
 

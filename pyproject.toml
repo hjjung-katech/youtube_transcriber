@@ -6,7 +6,7 @@ authors = ["Your Name <your.email@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.13"
 yt-dlp = "^2023.3.4"
 youtube-transcript-api = "^0.6.1"
 python-docx = "^0.8.11"
