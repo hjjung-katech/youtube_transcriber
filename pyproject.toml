@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "youtube-transcript-generator"
+version = "0.1.0"
+description = "유튜브 동영상 다운로드 및 자막 추출 스크립트"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+yt-dlp = "^2023.3.4"
+youtube-transcript-api = "^0.6.1"
+python-docx = "^0.8.11"
+tqdm = "^4.66.1"
+ffmpeg-python = "^0.2.0"
+google-generativeai = "^0.3.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+youtube-transcript = "youtube_transcript_generator.main:run_cli"
