@@ -18,6 +18,8 @@ python-dotenv = "^1.0.0"
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"
 isort = "^5.12.0"
+pytest = "^8.0.0"
+pytest-cov = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -25,3 +27,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 youtube-transcript = "youtube_transcript_generator.main:run_cli"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=youtube_transcript_generator --cov-report=term-missing"
